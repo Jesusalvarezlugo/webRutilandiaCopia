@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+}
+.header {
+    background-color: #A8D5A2;
+    color: black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 36px;
+    margin-left: 20px;
+}
+.welcome-message {
+    flex-grow: 1;
+    text-align: center;
+}
+.icons i {
+    font-size: 24px;
+    margin-left: 15px;
+}
+.nav {
+    background-color: #D8BFD8;
+    text-align: center;
+    padding: 10px;
+}
+.nav a {
+    color: black;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.footer {
+    background-color: #D8BFD8;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+}
