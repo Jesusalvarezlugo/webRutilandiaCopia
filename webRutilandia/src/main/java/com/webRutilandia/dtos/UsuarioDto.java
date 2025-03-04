@@ -3,6 +3,9 @@ package com.webRutilandia.dtos;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.sql.Date;
 
+/**
+ * Clase para los usuarios.
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UsuarioDto {
 

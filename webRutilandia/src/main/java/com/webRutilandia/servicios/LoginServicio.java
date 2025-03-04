@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 import com.webRutilandia.dtos.UsuarioDto;
 
 import jakarta.servlet.http.HttpSession;
-
+/**
+ * Servicio que gestiona los metodos de llamada a la api para el login
+ */
 @Service
 public class LoginServicio {
     @Autowired

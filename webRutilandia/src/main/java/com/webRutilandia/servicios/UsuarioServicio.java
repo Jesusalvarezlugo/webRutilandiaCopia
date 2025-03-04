@@ -79,7 +79,13 @@ public String enviarRegistroUsuario(UsuarioDto nuevoUsuario,HttpSession session)
 		return "error";
 	}
 
-
+/**
+ * Método para mandar el usuario actualizado a la api
+ * @param usuario
+ * @return
+ * @throws URISyntaxException
+ * @throws IOException
+ */
 public String actualizarUsuario(UsuarioDto usuario) throws URISyntaxException, IOException {
     // Convertir el objeto usuario actualizado a JSON
     ObjectMapper mapper = new ObjectMapper();
@@ -127,7 +133,13 @@ public String actualizarUsuario(UsuarioDto usuario) throws URISyntaxException, I
         return "error"; // Si la actualización falla, retornar "error"
     }
 }
-
+/**
+ * Método que verifica un email desde la api
+ * @param email
+ * @return
+ * @throws IOException
+ * @throws URISyntaxException
+ */
 public boolean emailExiste(String email) throws IOException, URISyntaxException {
     // Lógica para verificar si el email ya existe en la base de datos a través de la API.
     URI uri = new URI("http://localhost:8082/api/usuarios/emailExiste?email=" + email);
@@ -142,7 +154,14 @@ public boolean emailExiste(String email) throws IOException, URISyntaxException 
     }
     return false; // Si no es OK, el email no está en uso
 }
-
+/**
+ * Método que verifica la contraseña con la api
+ * @param email
+ * @param contrasenia
+ * @return
+ * @throws IOException
+ * @throws URISyntaxException
+ */
 public boolean verificarContrasenia(String email, String contrasenia) throws IOException, URISyntaxException {
     URI uri = new URI("http://localhost:8082/api/usuarios/verificarContrasenia?email=" + email + "&contrasenia=" + contrasenia);
     URL url = uri.toURL();
@@ -159,7 +178,14 @@ public boolean verificarContrasenia(String email, String contrasenia) throws IOE
     }
     return false;
 }
-
+/**
+ * Método que me trae detalles del usuario
+ * @param email
+ * @param token
+ * @return
+ * @throws IOException
+ * @throws URISyntaxException
+ */
 public UsuarioDto obtenerDetallesUsuario(String email, String token) throws IOException, URISyntaxException {
     // Construir la URL del endpoint que retorna los detalles del usuario, por ejemplo:
     URI uri = new URI("http://localhost:8082/api/usuarios/detalles?email=" + URLEncoder.encode(email, "UTF-8"));
@@ -187,11 +213,20 @@ public UsuarioDto obtenerDetallesUsuario(String email, String token) throws IOEx
         return null;
     }
 }
-
+/**
+ * Método para traer los usuarios desde la api
+ * @return
+ * @throws Exception
+ */
 public List<UsuarioDto> obtenerUsuariosDesdeApi() throws Exception {
     return apiServicio.cargarUsuariosDesdeApi(); // Este es el método real que hace GET a la API
 }
-
+/**
+ * Método que elimina un usuario 
+ * @param id
+ * @return
+ * @throws Exception
+ */
 public String eliminarUsuario(Long id) throws Exception {
     return apiServicio.eliminarUsuarioPorId(id);
 }

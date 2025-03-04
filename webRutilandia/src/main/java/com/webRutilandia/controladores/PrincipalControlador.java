@@ -5,7 +5,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
-
+/**
+ * Clase que se muestra al iniciar la aplicación
+ */
 @Controller
 public class PrincipalControlador {
 

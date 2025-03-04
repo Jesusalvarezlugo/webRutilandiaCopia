@@ -1,5 +1,7 @@
 package com.webRutilandia.dtos;
-
+/**
+ * Clase para el dto de las mesas
+ */
 public class MesaDto {
 	
 	Long idMesa;

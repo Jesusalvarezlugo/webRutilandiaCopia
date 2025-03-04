@@ -11,6 +11,9 @@ import com.webRutilandia.servicios.MesaServicio;
 
 import jakarta.servlet.http.HttpSession;
 
+/**
+ * Clase que controla los métodos para las mesas.
+ */
 @Controller
 public class MesaControlador {
 

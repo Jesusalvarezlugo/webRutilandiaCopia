@@ -72,6 +72,21 @@ public class UsuarioControlador {
         return "redirect:/login.jsp"; // Nombre de la página de éxito (exito.jsp)
     }
     
+    /**
+     * Método para modificar un usuario
+     * @param nombre
+     * @param apellido1
+     * @param apellido2
+     * @param email
+     * @param telefono
+     * @param nuevaContrasenia
+     * @param repNuevaContrasenia
+     * @param contraseniaActual
+     * @param session
+     * @return
+     * @throws IOException
+     * @throws URISyntaxException
+     */
     @PutMapping("/modificar")
     public String modificarUsuario(@RequestParam("nombre") String nombre,
                                    @RequestParam("apellido1") String apellido1,
